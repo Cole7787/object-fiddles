@@ -288,10 +288,7 @@ methodCollection.logHello();
 */
 
   function bindCard(person, creditcard){
-    var bindedInfo = {
+  Object.keys(creditcard).forEach(function(key){person[key]=creditcard[key];})
 
-    }
-   bindedInfo.person = person;
-   bindedInfo.creditcard = creditcard;
-    return bindedInfo;
+    return person;
   }
